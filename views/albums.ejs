@@ -1,0 +1,21 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+<%- include("./partials/nav.ejs") %>
+
+    <div class="albums">
+        <h2>Photo Albums</h2>
+        <% if (album.length > 0) { %>
+            <% album.forEach(album => { %>
+            <h3 class="title"><%= album.title %></h3>
+            <% }) %>
+        <% } else { %>
+        <p>There are no albums to display...</p>
+        <% } %>
+    </div>
+
+<%- include("./partials/footer.ejs") %>
+  
+</body>
+</html>
